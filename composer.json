@@ -1,0 +1,35 @@
+{
+    "name": "knplabs/rad-user",
+    "description": "Simply handle password encryption and salt generation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KNPLabs Team",
+            "email": "hello@knplabs.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "doctrine/orm": "~2.0",
+        "symfony/dependency-injection": "~2.0",
+        "symfony/http-kernel": "~2.0",
+        "symfony/security-core": "~2.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1",
+        "knplabs/phpspec-welldone-extension": "dev-master@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Knp\\Rad\\User": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
