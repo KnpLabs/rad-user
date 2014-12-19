@@ -14,16 +14,9 @@ class SaltGenerationListener
      */
     private $generator;
 
-    public function __construct()
+    public function __construct(Generator $generator = null)
     {
-        $this->generator = new DefaultGenerator();
-    }
-
-    public function setGenerator(Generator $generator)
-    {
-        $this->generator = $generator;
-
-        return $this;
+        $this->generator = null !== $generator ? $generator : new DefaultGenerator();
     }
 
     public function prePersist(LifecycleEventArgs $event)

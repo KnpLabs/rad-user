@@ -17,7 +17,7 @@ class SaltGenerationListenerSpec extends ObjectBehavior
 
         $user->getSalt()->willReturn(null);
 
-        $this->setGenerator($generator);
+        $this->beConstructedWith($generator);
     }
 
     function it_is_initializable()
