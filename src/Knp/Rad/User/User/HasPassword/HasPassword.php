@@ -2,41 +2,20 @@
 
 namespace Knp\Rad\User\User\HasPassword;
 
+use Knp\Rad\User\User\HasInitialPassword\HasInitialPassword;
+
 trait HasPassword
 {
-    /**
-     * @var string $plainPassword
-     */
-    protected $plainPassword;
+    use HasInitialPassword;
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPassword()
     {
         return $this->password;
     }
+
     public function setPassword($password)
     {
         $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setPlainPassword($plainPassword)
-    {
-        $this->plainPassword = $plainPassword;
 
         return $this;
     }

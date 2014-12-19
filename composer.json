@@ -13,7 +13,9 @@
         "doctrine/orm": "~2.0",
         "symfony/dependency-injection": "~2.0",
         "symfony/http-kernel": "~2.0",
-        "symfony/security-core": "~2.0"
+        "symfony/security-core": "~2.0",
+        "hackzilla/password-generator": "~0.7.0",
+        "symfony/config": "~2.0"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
@@ -29,7 +31,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "dev-master": "1.0.x-dev"
         }
     }
 }
