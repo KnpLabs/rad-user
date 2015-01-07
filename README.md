@@ -33,14 +33,14 @@ class AppKernel
 
 ##I want to auto-generate my user salt
 
-Your User model should implement the `Knp\Rad\User\User\HasSalt` interface.
+Your User model should implement the `Knp\Rad\User\HasSalt` interface.
 
 ```php
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Knp\Rad\User\User\HasSalt;
+use Knp\Rad\User\HasSalt;
 
 /**
  * @ORM\Entity
@@ -67,14 +67,14 @@ Now, before your user is inserted into your database, the salt will be auto-gene
 
 ##I want to auto-generate my user password
 
-Your User model should implement the `Knp\Rad\User\User\HasInitialPassword` interface.
+Your User model should implement the `Knp\Rad\User\HasInitialPassword` interface.
 
 ```php
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Knp\Rad\User\User\HasInitialPassword;
+use Knp\Rad\User\HasInitialPassword;
 
 /**
  * @ORM\Entity
@@ -101,14 +101,14 @@ Now, before your user is inserted or updated into your database, then the plain 
 
 ##I want to auto-encode my user password
 
-Your User model should implement the `Knp\Rad\User\User\HasPassword` interface.
+Your User model should implement the `Knp\Rad\User\HasPassword` interface.
 
 ```php
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Knp\Rad\User\User\HasPassword;
+use Knp\Rad\User\HasPassword;
 
 /**
  * @ORM\Entity
@@ -135,7 +135,7 @@ Now, before your user is inserted or updated into your database, if you have set
 
 #WARNING
 
-The `Knp\Rad\User\User\HasPassword\HasPassword` trait use the `Knp\Rad\User\User\HasInitialPassword\HasInitialPassword` trait. So don't use both into the same class or you will have a method conflict.
+The `Knp\Rad\User\HasPassword\HasPassword` trait use the `Knp\Rad\User\HasInitialPassword\HasInitialPassword` trait. So don't use both into the same class or you will have a method conflict.
 
 #Some tips
 

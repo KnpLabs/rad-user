@@ -1,8 +1,8 @@
 <?php
 
-namespace Knp\Rad\User\User\HasPassword;
+namespace Knp\Rad\User\HasPassword;
 
-use Knp\Rad\User\User\HasInitialPassword\HasInitialPassword;
+use Knp\Rad\User\HasInitialPassword\HasInitialPassword;
 
 trait HasPassword
 {
