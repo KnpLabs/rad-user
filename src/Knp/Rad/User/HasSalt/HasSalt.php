@@ -1,6 +1,6 @@
 <?php
 
-namespace Knp\Rad\User\User\HasSalt;
+namespace Knp\Rad\User\HasSalt;
 
 trait HasSalt
 {

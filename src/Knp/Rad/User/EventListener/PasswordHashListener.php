@@ -3,8 +3,8 @@
 namespace Knp\Rad\User\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
-use Knp\Rad\User\User\HasPassword;
-use Knp\Rad\User\User\HasSalt;
+use Knp\Rad\User\HasPassword;
+use Knp\Rad\User\HasSalt;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

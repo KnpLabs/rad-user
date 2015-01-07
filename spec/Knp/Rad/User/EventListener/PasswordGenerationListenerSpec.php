@@ -4,7 +4,7 @@ namespace spec\Knp\Rad\User\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Knp\Rad\User\Password\Generator;
-use Knp\Rad\User\User\HasInitialPassword;
+use Knp\Rad\User\HasInitialPassword;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

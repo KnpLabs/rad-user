@@ -3,7 +3,7 @@
 namespace spec\Knp\Rad\User\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
-use Knp\Rad\User\User\HasPassword;
+use Knp\Rad\User\HasPassword;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;

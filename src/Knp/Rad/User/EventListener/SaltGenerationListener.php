@@ -5,7 +5,7 @@ namespace Knp\Rad\User\EventListener;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Knp\Rad\User\Salt\Generator;
 use Knp\Rad\User\Salt\Generator\DefaultGenerator;
-use Knp\Rad\User\User\HasSalt;
+use Knp\Rad\User\HasSalt;
 
 class SaltGenerationListener
 {

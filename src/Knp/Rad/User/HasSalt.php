@@ -1,6 +1,6 @@
 <?php
 
-namespace Knp\Rad\User\User;
+namespace Knp\Rad\User;
 
 interface HasSalt
 {
