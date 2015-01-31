@@ -2,7 +2,7 @@
 
 namespace Knp\Rad\User\EventListener;
 
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\Password\Generator;
 use Knp\Rad\User\Password\Generator\HackzillaGenerator;
 use Knp\Rad\User\HasInitialPassword;

@@ -2,7 +2,7 @@
 
 namespace spec\Knp\Rad\User\EventListener;
 
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasPassword;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
