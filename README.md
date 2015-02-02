@@ -146,3 +146,10 @@ You can use your own salt generator. You just have to declare a service implemen
 ##Change the initial password generator
 
 You can change the default password generator. By default, the rad-users uses the [hackzilla/password-generator](https://github.com/hackzilla/password-generator). You can chenga it by implementing the `Knp\Rad\User\Password\Generator` interface and tag the service with the `knp_rad_user.password_generator` tag.
+
+##Using with MongoDB or CouchDB Object Document Mapper
+
+```yaml
+knp_rad_user:
+    doctrine_driver: mongodb # available values: orm (by default), mongodb or couchdb
+```

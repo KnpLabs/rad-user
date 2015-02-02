@@ -2,7 +2,7 @@
 
 namespace spec\Knp\Rad\User\EventListener;
 
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\Salt\Generator;
 use Knp\Rad\User\HasSalt;
 use PhpSpec\ObjectBehavior;

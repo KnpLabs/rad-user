@@ -2,21 +2,13 @@ services:
     knp_rad_user.event_listener.password_generation_listener:
         class: Knp\Rad\User\EventListener\PasswordGenerationListener
         public: false
-        tags:
-            - { name: doctrine.event_listener, event: prePersist, method: prePersist, priority: 200 }
 
     knp_rad_user.event_listener.password_hash_listener:
         class: Knp\Rad\User\EventListener\PasswordHashListener
         public: false
         arguments:
             - @security.encoder_factory
-        tags:
-            - { name: doctrine.event_listener, event: preUpdate, method: preUpdate }
-            - { name: doctrine.event_listener, event: prePersist, method: prePersist, priority: 100 }
 
     knp_rad_user.event_listener.salt_generation_listener:
         class: Knp\Rad\User\EventListener\SaltGenerationListener
         public: false
-        tags:
-            - { name: doctrine.event_listener, event: prePersist, method: prePersist, priority: 200 }
-
