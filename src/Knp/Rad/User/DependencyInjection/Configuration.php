@@ -17,13 +17,9 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('doctrine_driver')
-                    ->validate()
-                        ->ifNotInArray(['orm', 'mongodb', 'couchdb'])
-                        ->thenInvalid('Invalid Doctrine driver %s.')
-                    ->end()
+                ->enumNode('doctrine_driver')
+                    ->values(['orm', 'mongodb', 'couchdb'])
                     ->defaultValue('orm')
-                    ->cannotBeEmpty()
                 ->end();
 
         return $treeBuilder;
