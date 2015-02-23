@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Knp\Rad\User\EventListener;
+namespace spec\Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-use Knp\Rad\User\Salt\Generator;
 use Knp\Rad\User\HasSalt;
+use Knp\Rad\User\Salt\Generator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -13,7 +13,7 @@ class SaltGenerationListenerSpec extends ObjectBehavior
     function let(Generator $generator, HasSalt $user, LifecycleEventArgs $event)
     {
         $generator->generate()->willReturn('salt');
-        $event->getEntity()->willReturn($user);
+        $event->getObject()->willReturn($user);
 
         $user->getSalt()->willReturn(null);
 
@@ -22,7 +22,7 @@ class SaltGenerationListenerSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Knp\Rad\User\EventListener\SaltGenerationListener');
+        $this->shouldHaveType('Knp\Rad\User\EventListener\Persistence\SaltGenerationListener');
     }
 
     function it_set_salt_if_needed($user, $event)
