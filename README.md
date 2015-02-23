@@ -149,7 +149,4 @@ You can change the default password generator. By default, the rad-users uses th
 
 ##Using with MongoDB or CouchDB Object Document Mapper
 
-```yaml
-knp_rad_user:
-    doctrine_driver: mongodb # available values: orm (by default), mongodb or couchdb
-```
+The knp/rad-user library is also compatible with MongoDB and CouchDB
