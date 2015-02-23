@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Knp\Rad\User\EventListener;
+namespace spec\Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasPassword;
@@ -19,7 +19,7 @@ class PasswordHashListenerSpec extends ObjectBehavior
         $user->setPassword(Argument::any())->willReturn(null);
         $user->eraseCredentials()->willReturn(null);
 
-        $event->getEntity()->willReturn($user);
+        $event->getObject()->willReturn($user);
 
         $factory->getEncoder($user)->willReturn($encoder);
 
@@ -30,7 +30,7 @@ class PasswordHashListenerSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Knp\Rad\User\EventListener\PasswordHashListener');
+        $this->shouldHaveType('Knp\Rad\User\EventListener\Persistence\PasswordHashListener');
     }
 
     function it_erases_credentials_if_user($user, $event)
