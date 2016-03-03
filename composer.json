@@ -9,13 +9,13 @@
         }
     ],
     "require": {
-        "doctrine/common": "~2.0",
+        "doctrine/common": "~2.4",
         "hackzilla/password-generator": "~0.7.0",
         "php": ">=5.4",
-        "symfony/config": "~2.0||~3.0",
-        "symfony/dependency-injection": "~2.0||~3.0",
-        "symfony/http-kernel": "~2.0||~3.0",
-        "symfony/security-core": "~2.0||~3.0"
+        "symfony/config": "~2.4||~3.0",
+        "symfony/dependency-injection": "~2.4||~3.0",
+        "symfony/http-kernel": "~2.4||~3.0",
+        "symfony/security-core": "~2.4||~3.0"
     },
     "require-dev": {
         "knplabs/phpspec-welldone-extension": "dev-master@dev",
