@@ -9,7 +9,7 @@ Simply handle password encryption and salt generation
 #Installation
 
 ```bash
-composer require knplabs/rad-user ~1.0
+composer require knplabs/rad-user ~2.0
 ```
 
 ```php
