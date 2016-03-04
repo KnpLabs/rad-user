@@ -4,6 +4,7 @@ Simply handle password encryption and salt generation
 
 [![Build Status](https://travis-ci.org/KnpLabs/rad-user.svg?branch=master)](https://travis-ci.org/KnpLabs/rad-user)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KnpLabs/rad-user/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/KnpLabs/rad-user/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/knplabs/rad-user/v/stable)](https://packagist.org/packages/knplabs/rad-user) [![Total Downloads](https://poser.pugx.org/knplabs/rad-user/downloads)](https://packagist.org/packages/knplabs/rad-user) [![Latest Unstable Version](https://poser.pugx.org/knplabs/rad-user/v/unstable)](https://packagist.org/packages/knplabs/rad-user) [![License](https://poser.pugx.org/knplabs/rad-user/license)](https://packagist.org/packages/knplabs/rad-user)
 
 #Installation
 
