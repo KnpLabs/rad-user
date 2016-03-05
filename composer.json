@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "knplabs/phpspec-welldone-extension": "dev-master@dev",
-        "phpspec/phpspec": "~2.1"
+        "phpspec/phpspec": "~2.4"
     },
     "autoload": {
         "psr-4": {
