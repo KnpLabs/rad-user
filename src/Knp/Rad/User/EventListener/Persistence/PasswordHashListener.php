@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class PasswordHashListener
 {
     /**
-     * @var EncoderFactoryInterface $encoderFactory
+     * @var EncoderFactoryInterface
      */
     private $encoderFactory;
 

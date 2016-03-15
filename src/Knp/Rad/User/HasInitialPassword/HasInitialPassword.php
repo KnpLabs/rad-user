@@ -5,7 +5,7 @@ namespace Knp\Rad\User\HasInitialPassword;
 trait HasInitialPassword
 {
     /**
-     * @var string $plainPassword
+     * @var string
      */
     protected $plainPassword;
 

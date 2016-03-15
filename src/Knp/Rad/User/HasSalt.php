@@ -4,7 +4,6 @@ namespace Knp\Rad\User;
 
 interface HasSalt
 {
-
     /**
      * @return string
      */

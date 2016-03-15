@@ -10,7 +10,7 @@ use Knp\Rad\User\Salt\Generator\DefaultGenerator;
 class SaltGenerationListener
 {
     /**
-     * @var Generator $generator
+     * @var Generator
      */
     private $generator;
 

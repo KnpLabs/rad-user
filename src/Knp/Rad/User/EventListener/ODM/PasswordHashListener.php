@@ -4,12 +4,11 @@ namespace Knp\Rad\User\EventListener\ODM;
 
 use Doctrine\ODM\MongoDB\Event\LifecycleEventArgs;
 use Knp\Rad\User\EventListener\Persistence\PasswordHashListener as WrappedListener;
-use Knp\Rad\User\HasPassword;
 
 class PasswordHashListener
 {
     /**
-     * @var WrappedListener $wrapped
+     * @var WrappedListener
      */
     private $wrapped;
 
