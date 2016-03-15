@@ -2,9 +2,7 @@
 
 namespace spec\Knp\Rad\User\DependencyInjection;
 
-use Knp\Rad\User\DependencyInjection\Compiler\SaltGeneratorPass;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class UserExtensionSpec extends ObjectBehavior
 {

@@ -33,7 +33,7 @@ class HackzillaGeneratorSpec extends ObjectBehavior
     function it_change_password_config($generator)
     {
         $options = array('uppercase' => true, 'numeric' => false);
-        $result = ComputerPasswordGenerator::OPTION_AVOID_SIMILAR
+        $result  = ComputerPasswordGenerator::OPTION_AVOID_SIMILAR
             | ComputerPasswordGenerator::OPTION_UPPER_CASE
             | ComputerPasswordGenerator::OPTION_LOWER_CASE
         ;
@@ -48,6 +48,6 @@ class HackzillaGeneratorSpec extends ObjectBehavior
     {
         $this->beConstructedWith(array(), $generator);
 
-        $this->generate()->shouldReturn('password');;
+        $this->generate()->shouldReturn('password');
     }
 }

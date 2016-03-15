@@ -3,7 +3,6 @@
 namespace spec\Knp\Rad\User\Salt\Generator;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class DefaultGeneratorSpec extends ObjectBehavior
 {

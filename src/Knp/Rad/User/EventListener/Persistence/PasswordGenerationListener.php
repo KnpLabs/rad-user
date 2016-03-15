@@ -10,7 +10,7 @@ use Knp\Rad\User\Password\Generator\HackzillaGenerator;
 class PasswordGenerationListener
 {
     /**
-     * @var Generator $generator
+     * @var Generator
      */
     private $generator;
 
