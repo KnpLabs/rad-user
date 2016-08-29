@@ -4,6 +4,8 @@ namespace Knp\Rad\User\HasSalt;
 
 trait HasSalt
 {
+    protected $salt;
+    
     public function getSalt()
     {
         return $this->salt;
