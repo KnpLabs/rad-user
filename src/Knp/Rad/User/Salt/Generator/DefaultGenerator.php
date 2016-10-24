@@ -11,6 +11,6 @@ class DefaultGenerator implements Generator
      */
     public function generate()
     {
-        return md5(uniqid().time());
+        return md5(uniqid() . time());
     }
 }

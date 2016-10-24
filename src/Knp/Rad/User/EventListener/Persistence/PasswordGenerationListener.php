@@ -5,7 +5,7 @@ namespace Knp\Rad\User\EventListener\Persistence;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasInitialPassword;
 use Knp\Rad\User\Password\Generator;
-use Knp\Rad\User\Password\Generator\HackzillaGenerator;
+use Knp\Rad\User\Password\Generator\UniqidGenerator;
 
 class PasswordGenerationListener
 {
@@ -19,7 +19,7 @@ class PasswordGenerationListener
      */
     public function __construct(Generator $generator = null)
     {
-        $this->generator = null !== $generator ? $generator : new HackzillaGenerator();
+        $this->generator = null !== $generator ? $generator : new UniqidGenerator();
     }
 
     /**

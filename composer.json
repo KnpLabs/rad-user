@@ -9,9 +9,8 @@
         }
     ],
     "require": {
-        "doctrine/common": "~2.4",
-        "hackzilla/password-generator": "~0.7.0",
         "php": ">=5.4",
+        "doctrine/common": "~2.4",
         "symfony/config": "~2.4||~3.0",
         "symfony/dependency-injection": "~2.4||~3.0",
         "symfony/http-kernel": "~2.4||~3.0",
@@ -19,7 +18,7 @@
     },
     "require-dev": {
         "knplabs/phpspec-welldone-extension": "dev-master@dev",
-        "pedrotroller/php-cs-custom-fixer": "~1.2.1",
+        "pedrotroller/php-cs-custom-fixer": "~1.5.0",
         "phpspec/phpspec": "~2.4"
     },
     "autoload": {
@@ -28,11 +27,12 @@
         }
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "2.1.x-dev"
         }
     }
 }
