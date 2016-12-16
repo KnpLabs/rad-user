@@ -9,11 +9,19 @@ trait HasInitialPassword
      */
     protected $plainPassword;
 
+    /**
+     * @return string
+     */
     public function getPlainPassword()
     {
         return $this->plainPassword;
     }
 
+    /**
+     * @param string $plainPassword
+     *
+     * @return self
+     */
     public function setPlainPassword($plainPassword)
     {
         $this->plainPassword = $plainPassword;

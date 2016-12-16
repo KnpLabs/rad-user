@@ -34,6 +34,8 @@ class AppKernel
 
 ##I want to auto-generate my user salt
 
+> The salt feature is deprecated since PHP 5.5 and BCrypt usage. Please upgrade your version of PHP and use BCrypt.
+
 Your User model should implement the `Knp\Rad\User\HasSalt` interface.
 
 ```php
@@ -139,14 +141,6 @@ Now, before your user is inserted or updated into your database, if you have set
 The `Knp\Rad\User\HasPassword\HasPassword` trait use the `Knp\Rad\User\HasInitialPassword\HasInitialPassword` trait. So don't use both into the same class or you will have a method conflict.
 
 #Some tips
-
-##Change the salt generator
-
-You can use your own salt generator. You just have to declare a service implementing the `Knp\Rad\User\Salt\Generator` interface and tag it with `knp_rad_user.salt_generator`.
-
-##Change the initial password generator
-
-You can change the default password generator. By default, the rad-users uses the [hackzilla/password-generator](https://github.com/hackzilla/password-generator). You can chenga it by implementing the `Knp\Rad\User\Password\Generator` interface and tag the service with the `knp_rad_user.password_generator` tag.
 
 ##Using with MongoDB or CouchDB Object Document Mapper
 

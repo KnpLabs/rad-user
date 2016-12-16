@@ -5,7 +5,6 @@ namespace Knp\Rad\User\EventListener\Persistence;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasSalt;
 use Knp\Rad\User\Salt\Generator;
-use Knp\Rad\User\Salt\Generator\DefaultGenerator;
 
 class SaltGenerationListener
 {
@@ -15,11 +14,11 @@ class SaltGenerationListener
     private $generator;
 
     /**
-     * @param Generator|null $generator
+     * @param Generator $generator
      */
-    public function __construct(Generator $generator = null)
+    public function __construct(Generator $generator)
     {
-        $this->generator = null !== $generator ? $generator : new DefaultGenerator();
+        $this->generator = $generator;
     }
 
     /**
