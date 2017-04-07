@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
+    <parameter key="knp_rad_user.password.generator.random_bytes.length">20</parameter>
     <parameter key="knp_rad_user.salt.generator.random_bytes.length">255</parameter>
   </parameters>
 
@@ -33,8 +34,12 @@
       <argument type="service" id="knp_rad_user.salt.generator"/>
     </service>
 
+    <service id="knp_rad_user.password.generator.pseudo_random_bytes_generator" class="Knp\Rad\User\Password\Generator\PseudoRandomBytesGenerator" public="false" lazy="true">
+        <argument>%knp_rad_user.password.generator.random_bytes.length%</argument>
+    </service>
+
     <service id="knp_rad_user.salt.generator.pseudo_random_bytes_generator" class="Knp\Rad\User\Salt\Generator\PseudoRandomBytesGenerator" public="false" lazy="true">
-      <argument type="parameter" id="knp_rad_user.salt.generator.random_bytes.length"/>
+        <argument>%knp_rad_user.salt.generator.random_bytes.length%</argument>
     </service>
 
     <service id="knp_rad_user.salt.generator" alias="knp_rad_user.salt.generator.pseudo_random_bytes_generator" />
