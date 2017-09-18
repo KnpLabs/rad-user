@@ -6,6 +6,10 @@ A **Symfony bundle** to simply handle password encryption and salt generation
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KnpLabs/rad-user/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/KnpLabs/rad-user/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/knplabs/rad-user/v/stable)](https://packagist.org/packages/knplabs/rad-user) [![Total Downloads](https://poser.pugx.org/knplabs/rad-user/downloads)](https://packagist.org/packages/knplabs/rad-user) [![Latest Unstable Version](https://poser.pugx.org/knplabs/rad-user/v/unstable)](https://packagist.org/packages/knplabs/rad-user) [![License](https://poser.pugx.org/knplabs/rad-user/license)](https://packagist.org/packages/knplabs/rad-user)
 
+# Official maintainers:
+
+* [@Einenlum](https://github.com/Einenlum)
+
 # Installation
 
 ```bash
