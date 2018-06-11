@@ -34,7 +34,7 @@
     </service>
 
     <service id="knp_rad_user.salt.generator.pseudo_random_bytes_generator" class="Knp\Rad\User\Salt\Generator\PseudoRandomBytesGenerator" public="false" lazy="true">
-      <argument type="parameter" id="knp_rad_user.salt.generator.random_bytes.length"/>
+      <argument type="expression">parameter('knp_rad_user.salt.generator.random_bytes.length')</argument>
     </service>
 
     <service id="knp_rad_user.salt.generator" alias="knp_rad_user.salt.generator.pseudo_random_bytes_generator" />
