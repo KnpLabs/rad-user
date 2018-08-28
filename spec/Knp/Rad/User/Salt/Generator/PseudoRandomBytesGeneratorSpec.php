@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace spec\Knp\Rad\User\Salt\Generator;
 
 use PhpSpec\ObjectBehavior;
@@ -30,6 +32,6 @@ class PseudoRandomBytesGeneratorSpec extends ObjectBehavior
     {
         $this->beConstructedWith(25);
 
-        expect(strlen($this->generate()->getWrappedObject()))->toBe(25);
+        expect(\strlen($this->generate()->getWrappedObject()))->toBe(25);
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\HasPassword;
 
 use Knp\Rad\User\HasInitialPassword\HasInitialPassword;

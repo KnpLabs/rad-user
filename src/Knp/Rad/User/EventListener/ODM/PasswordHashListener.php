@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\EventListener\ODM;
 
 use Doctrine\ODM\MongoDB\Event\LifecycleEventArgs;
@@ -18,8 +20,6 @@ class PasswordHashListener
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function prePersist(LifecycleEventArgs $event)
@@ -28,8 +28,6 @@ class PasswordHashListener
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function preUpdate(LifecycleEventArgs $event)
@@ -43,7 +41,7 @@ class PasswordHashListener
         $object = $event->getObject();
         $om     = $event->getObjectManager();
         $uow    = $om->getUnitOfWork();
-        $meta   = $om->getClassMetadata(get_class($object));
+        $meta   = $om->getClassMetadata(\get_class($object));
         $uow->recomputeSingleDocumentChangeSet($meta, $object);
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\Salt\Generator;
 
 use Knp\Rad\User\Salt\Generator;

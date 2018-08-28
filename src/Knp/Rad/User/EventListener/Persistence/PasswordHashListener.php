@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
@@ -16,17 +18,12 @@ class PasswordHashListener
      */
     private $encoderFactory;
 
-    /**
-     * @param EncoderFactoryInterface $encoderFactory
-     */
     public function __construct(EncoderFactoryInterface $encoderFactory)
     {
         $this->encoderFactory = $encoderFactory;
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function prePersist(LifecycleEventArgs $event)
@@ -37,8 +34,6 @@ class PasswordHashListener
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function preUpdate(LifecycleEventArgs $event)

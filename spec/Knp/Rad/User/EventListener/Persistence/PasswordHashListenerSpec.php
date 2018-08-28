@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace spec\Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
@@ -11,8 +13,12 @@ use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 
 class PasswordHashListenerSpec extends ObjectBehavior
 {
-    function let(EncoderFactoryInterface $factory, PasswordEncoderInterface $encoder, HasPassword $user, LifecycleEventArgs $event)
-    {
+    function let(
+        EncoderFactoryInterface $factory,
+        PasswordEncoderInterface $encoder,
+        HasPassword $user,
+        LifecycleEventArgs $event
+    ) {
         $user->implement('Symfony\Component\Security\Core\User\UserInterface');
         $user->getPlainPassword()->willReturn('password');
         $user->getSalt()->willReturn('salt');

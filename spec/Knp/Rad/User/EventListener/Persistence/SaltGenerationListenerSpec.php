@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace spec\Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
