@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\Bundle;
 
 use Knp\Rad\User\DependencyInjection\UserExtension;

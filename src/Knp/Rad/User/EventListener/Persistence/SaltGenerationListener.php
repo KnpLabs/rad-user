@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
@@ -13,17 +15,12 @@ class SaltGenerationListener
      */
     private $generator;
 
-    /**
-     * @param Generator $generator
-     */
     public function __construct(Generator $generator)
     {
         $this->generator = $generator;
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function prePersist(LifecycleEventArgs $event)

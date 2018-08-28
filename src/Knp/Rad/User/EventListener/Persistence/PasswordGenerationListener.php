@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Knp\Rad\User\EventListener\Persistence;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
@@ -14,17 +16,12 @@ class PasswordGenerationListener
      */
     private $generator;
 
-    /**
-     * @param Generator|null $generator
-     */
     public function __construct(Generator $generator = null)
     {
         $this->generator = null !== $generator ? $generator : new UniqidGenerator();
     }
 
     /**
-     * @param LifecycleEventArgs $event
-     *
      * @return false|void False if nothing was done
      */
     public function prePersist(LifecycleEventArgs $event)

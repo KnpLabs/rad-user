@@ -1,0 +1,85 @@
+---
+parameters:
+  knp_rad_user.salt.generator.random_bytes.length: 255
+
+services:
+  _defaults:
+    public: false
+    autowire: false
+
+  Knp\Rad\User\EventListener\ODM\PasswordHashListener:
+    arguments:
+      - '@Knp\Rad\User\EventListener\Persistence\PasswordHashListener'
+    tags:
+      - name: doctrine_mongodb.odm.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 100
+      - name: doctrine_mongodb.odm.event_listener
+        event: preUpdate
+        method: preUpdate
+      - name: doctrine_couchdb.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 100
+      - name: doctrine_couchdb.event_listener
+        event: preUpdate
+        method: preUpdate
+
+  Knp\Rad\User\EventListener\Persistence\PasswordHashListener:
+    arguments:
+      - '@Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface'
+    tags:
+      - name: doctrine.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 100
+      - name: doctrine.event_listener
+        event: preUpdate
+        method: preUpdate
+
+  Knp\Rad\User\EventListener\Persistence\PasswordGenerationListener:
+    arguments:
+      - '@Knp\Rad\User\Password\Generator'
+    tags:
+      - name: doctrine.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+      - name: doctrine_mongodb.odm.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+      - name: doctrine_couchdb.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+
+  Knp\Rad\User\EventListener\Persistence\SaltGenerationListener:
+    arguments:
+      - '@Knp\Rad\User\Salt\Generator'
+    tags:
+      - name: doctrine.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+      - name: doctrine_mongodb.odm.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+      - name: doctrine_couchdb.event_listener
+        event: prePersist
+        method: prePersist
+        priority: 200
+
+  Knp\Rad\User\Salt\Generator\PseudoRandomBytesGenerator:
+    arguments:
+      - '%knp_rad_user.salt.generator.random_bytes.length%'
+
+  Knp\Rad\User\Salt\Generator:
+    alias: Knp\Rad\User\Salt\Generator\PseudoRandomBytesGenerator
+
+  Knp\Rad\User\Password\Generator\UniqidGenerator: ~
+
+  Knp\Rad\User\Password\Generator:
+    alias: Knp\Rad\User\Password\Generator\UniqidGenerator

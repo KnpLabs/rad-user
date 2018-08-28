@@ -20,5 +20,5 @@ before_script:
     - composer update --prefer-dist --dev $COMPOSER_FLAGS
 
 script:
-    - bin/php-cs-fixer --diff --dry-run -v fix
-    - bin/phpspec run -fpretty
+    - vendor/bin/php-cs-fixer --diff --dry-run -v fix
+    - vendor/bin/phpspec run -fpretty
