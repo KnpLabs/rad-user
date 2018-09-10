@@ -26,6 +26,6 @@ class PseudoRandomBytesGenerator implements Generator
      */
     public function generate()
     {
-        return openssl_random_pseudo_bytes($this->length);
+        return bin2hex(openssl_random_pseudo_bytes($this->length));
     }
 }
